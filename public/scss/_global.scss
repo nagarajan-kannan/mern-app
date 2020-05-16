@@ -1,0 +1,48 @@
+// Global scss features
+@import './features';
+
+// Elements for app
+@import './elements';
+
+body {
+    @include maven-regular;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+main {
+    background: $page-bg-color;
+    min-height: $page-min-height;
+}
+
+.alert {
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    position: fixed;
+    width: 95%;
+    margin: 0 auto;
+    top: 10px;
+    left: 0;
+    right: 0;;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    border: 5px solid $alert-color;
+    background: $white-color;
+    z-index: 999;
+    visibility: collapse;
+    opacity: 0;
+    &.alert-danger {
+        border-color: $alert-danger-color;
+    }
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}

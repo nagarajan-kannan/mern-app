@@ -1,0 +1,90 @@
+@import "../../../public/scss/features/variables";
+
+.home-page {
+    padding: 20px;
+
+    .username {
+        text-transform: uppercase;
+        margin-right: 15px;
+    }
+
+    .items-title {
+        text-align: center;
+    }
+
+    .fruits-block {
+        margin: 40px 0px 0px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .basket-block {
+        justify-content: center;
+    }
+
+    .basket {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+        text-align: center;
+
+        h5 {
+            text-transform: uppercase;
+        }
+
+        .action-btn {
+            cursor: pointer;
+
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.7;
+            }
+        }
+
+        .element {
+            height: 20px;
+            margin-bottom: 2px;
+        }
+
+        &.empty {
+            border: 1px solid #000;
+            min-height: 100px;
+            height: auto;
+        }
+    }
+
+    .basket,
+    .element {
+        &.apple {
+            background: pink;
+        }
+
+        &.orange {
+            background: orange;
+        }
+
+        &.grapes {
+            background: purple;
+        }
+    }
+
+    .login-btn {
+        text-transform: uppercase;
+        font-size: 10px;
+        text-align: center;
+        display: inline-block;
+        letter-spacing: 2px;
+        padding: 5px 15px;
+        border-radius: 2px;
+        color: $white-color;
+        cursor: pointer;
+        &:before {
+            border-radius: 2px;
+        }
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+}
